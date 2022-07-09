@@ -13,21 +13,25 @@ namespace AutoEditor
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(string sender = "")
         {
             InitializeComponent();
-            string[] files = { "addLeaders.editor", "inviteSupports.editor", "removeAdmins.editor", "removeLeaders.editor", "removeSupports.editor", "transferLeaders.editor", "transferSupports.editor", "vostAdmins.editor" };
-            try
+            if (sender != "this")
             {
-                foreach (string file in files)
+                string[] files = { "addLeaders.editor", "inviteSupports.editor", "removeAdmins.editor", "removeLeaders.editor", "removeSupports.editor", "transferLeaders.editor", "transferSupports.editor", "vostAdmins.editor" };
+                try
                 {
-                    File.Delete(Directory.GetCurrentDirectory() + "\\common\\storage\\" + file);
+                    foreach (string file in files)
+                    {
+                        File.Delete(Directory.GetCurrentDirectory() + "\\common\\storage\\" + file);
+                    }
+                }
+                catch (IOException)
+                {
+
                 }
             }
-            catch (IOException)
-            {
 
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

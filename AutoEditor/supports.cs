@@ -42,7 +42,7 @@ namespace AutoEditor
 
         private void goHub_Click(object sender, EventArgs e)
         {
-            Form1 hub = new Form1();
+            Form1 hub = new Form1("this");
             hub.Show();
             this.Hide();
         }
