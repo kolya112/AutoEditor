@@ -159,7 +159,10 @@
             "\"Городская больница\"",
             "\"МВД\"",
             "\"ФСБ\"",
-            "\"МЧС\""});
+            "\"МЧС\"",
+            "\"ОПГ Оффники\"",
+            "\"ОПГ Тамбовское\"",
+            "\"ОПГ Кавказское\""});
             this.orgBox.Location = new System.Drawing.Point(486, 58);
             this.orgBox.Name = "orgBox";
             this.orgBox.Size = new System.Drawing.Size(130, 21);
@@ -253,7 +256,10 @@
             "\"Городская больница\"",
             "\"МВД\"",
             "\"ФСБ\"",
-            "\"МЧС\""});
+            "\"МЧС\"",
+            "\"ОПГ Оффники\"",
+            "\"ОПГ Тамбовское\"",
+            "\"ОПГ Кавказское\""});
             this.inviteOrg.Location = new System.Drawing.Point(486, 213);
             this.inviteOrg.Name = "inviteOrg";
             this.inviteOrg.Size = new System.Drawing.Size(130, 21);
@@ -338,7 +344,10 @@
             "\"Городская больница\"",
             "\"МВД\"",
             "\"ФСБ\"",
-            "\"МЧС\""});
+            "\"МЧС\"",
+            "\"ОПГ Оффники\"",
+            "\"ОПГ Тамбовское\"",
+            "\"ОПГ Кавказское\""});
             this.transferOrg.Location = new System.Drawing.Point(486, 366);
             this.transferOrg.Name = "transferOrg";
             this.transferOrg.Size = new System.Drawing.Size(130, 21);
