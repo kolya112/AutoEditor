@@ -16,6 +16,17 @@ namespace AutoEditor
         public compiling()
         {
             InitializeComponent();
+
+        }
+
+        private void compiling_Load(object sender, EventArgs e)
+        {
+            this.Activated += AfterLoading;
+        }
+
+        private void AfterLoading(object sender, EventArgs e)
+        {
+            this.Activated -= AfterLoading;
             string StorageDirectory = Directory.GetCurrentDirectory() + "\\common\\storage\\";
             bool isAddLeadersExits = File.Exists(StorageDirectory + "addLeaders.editor");
             bool isRemoveAdminsExits = File.Exists(StorageDirectory + "removeAdmins.editor");
@@ -208,11 +219,6 @@ namespace AutoEditor
             File.WriteAllText(Directory.GetCurrentDirectory() + "\\common\\storage\\result.txt", compiling.ToString());
 
             status.Text = $"СОХРАНЕНИЕ ДАННЫХ УСПЕШНО ПРОИЗОШЛО. СКОПИРУЙТЕ ГОТОВЫЙ ТЕКСТ НИЖЕ ИЛИ ОТКРОЙТЕ ПО ПУТИ: {Directory.GetCurrentDirectory()}\\common\\storage\\result.txt";
-        }
-
-        private void compiling_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void compiling_FormClosing(object sender, FormClosingEventArgs e)
